@@ -29,10 +29,8 @@ class Counter
      */
     protected function calculateFromFile(\DirectoryIterator $iterator)
     {
-        $content = file_get_contents($iterator->getPathname());
-        $content = preg_replace('/[ ]+/', ' ', preg_replace('/[^0-9 \.]/', ' ', str_replace(PHP_EOL, '' , $content)));
-        foreach (explode(' ', $content) as $value) {
-            $this->count += floatval($value);
+        if (preg_match_all('/\d+\.?\d*/', file_get_contents($iterator->getPathname()), $matches)) {
+            $this->count += array_sum($matches[0]);
         }
     }
 

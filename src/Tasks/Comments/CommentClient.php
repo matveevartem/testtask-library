@@ -28,7 +28,7 @@ class CommentClient
     /**
      * @param string|null $targetUrl API Server URL
      */
-    public function __construct(string $targetUrl = 'http://localhost:8000/v1/comment')
+    public function __construct(string $targetUrl = 'http://localhost:80/v1/comment')
     {
         $this->targetUrl = $targetUrl;
         $this->statusCode = 0;

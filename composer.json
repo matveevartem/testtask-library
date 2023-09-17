@@ -1,0 +1,24 @@
+{
+    "name": "matveevartem/testtask-library",
+    "description": "Test Task",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ArtemMatveev\\TestTask\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Artem Matveev",
+            "email": "dev.artem.matveev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0 <8.0",
+        "guzzlehttp/guzzle": ">=6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.x"
+    }
+}
